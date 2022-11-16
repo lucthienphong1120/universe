@@ -26,6 +26,7 @@
         <a href="https://www.crf-blogger.gq/">
             <img width="300" src="https://cdn.ltp110.tk/images/logo/logo.jpg" title="ltp" />
         </a>
+
     </div>
 
     <script type="module">
@@ -125,8 +126,8 @@
                     float d = length(gl_PointCoord.xy - 0.5);
                     if (d > 0.5) discard;
                 `).replace(
-                        `vec4 diffuseColor = vec4(diffuse, opacity);`,
-                        `vec4 diffuseColor = vec4(vColor, smoothstep(0.5, 0.1, d));`
+                        `vec4 diffuseColor = vec4( diffuse, opacity );`,
+                        `vec4 diffuseColor = vec4( vColor, smoothstep(0.5, 0.1, d) );`
                     );
                 // console.log(shader.fragmentShader);
             }
